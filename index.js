@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
-const botconfig = require("./botconfig.json");
+const botconfig = require("./botconfig.js");
 const bot = new Discord.Client({disableEveryone: true});
-const prefix = botconfig.prefix;
 const { RichEmbed, Attachment } = require('discord.js');
+const { token, ownerID, prefix } = require('./botconfig')
 const iEmbed = require('discord.js');
 const fs = require("fs");
 
@@ -143,4 +143,4 @@ bot.on('message', function(message){
   }
 });
 
-bot.login(botconfig.token);
+bot.login(token);
